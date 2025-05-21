@@ -19,6 +19,9 @@ public class DemoModel implements Demo {
     @ValueMapValue
     public String Number;
 
+    @ValueMapValue
+    public String Number1;
+
     public String getText() {
         return Text;
     }
