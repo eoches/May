@@ -11,27 +11,31 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class DemoModel implements Demo {
 
     @ValueMapValue
-    public String Text;
+    public String Title;
 
     @ValueMapValue
-    public String Description;
+    public String Notes;
 
     @ValueMapValue
-    public String Number;
+    public int Pageno;
 
     @ValueMapValue
-    public String Number1;
+    public String Date;
 
     public String getText() {
-        return Text;
+        return Title;
     }
 
     public String getDescription() {
-        return Description;
+        return Notes;
     }
 
-    public String getNumber() {
-        return Number;
+    public int getNumber() {
+        return Pageno;
+    }
+
+    public String getDate() {
+        return Date;
     }
 
 

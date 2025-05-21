@@ -4,7 +4,8 @@ public interface Demo {
 
      public String getText() ;
      public String getDescription() ;
-     public String getNumber() ;
+     public int getNumber() ;
+     public String getDate();
     
 
 }
