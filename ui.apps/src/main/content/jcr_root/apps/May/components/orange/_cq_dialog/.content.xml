@@ -26,6 +26,6 @@
                 sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
                 fieldLabel="Date"
                 name="./Date"/>
-             </items>
+        </items>
     </content>
 </jcr:root>
