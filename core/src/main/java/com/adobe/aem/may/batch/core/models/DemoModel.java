@@ -4,7 +4,8 @@ import	com.day.cq.wcm.api.Page;
 
 import org.apache.sling.api.resource.ResourceResolver;
 
-import java.beans.ConstructorProperties;
+import java.util.Calendar;
+import java.util.Locale;
 
 import javax.inject.Inject;
 
@@ -61,9 +62,9 @@ public class DemoModel{
         return currentPage.getPath();
     }
 
-     public Page getArticleTitleParent()
+     public Calendar getArticleModified()
     {
-        return currentPage.getParent();
+        return currentPage.getLastModified();
     }
 
 
