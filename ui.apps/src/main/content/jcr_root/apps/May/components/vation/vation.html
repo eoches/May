@@ -1,3 +1,6 @@
+
+
+
 <div data-sly-use.model = com.adobe.aem.may.batch.core.models.VationParent>
 
     ${model.text}  <br>
@@ -9,19 +12,62 @@
     ${item.bookname} <br>
     ${item.bookdes}  <br>
     ${item.booknum}  <br>
-
-   <h2>${ 'dd-MM-yyyy' @ format=item.bookpublishdate}</h2>
+    ${ 'dd-MM-yyyy' @ format=item.bookpublishdate}<br>
 
     <div data-sly-list.item1=${item.bookdetailswithwriter}>
 
      ${item1.writername} <br>
     ${item1.writerinfo}  <br>
     ${item1.writernum}  <br>
-   <h2>${ 'dd-MM-yyyy' @ format=item1.writerdob}</h2>
+    ${ 'dd-MM-yyyy' @ format=item1.writerdob}<br>
+</div>
+</div>
+</div>
 
-    </div>
+<h2>JavaScript Alert message display</h2>
+
+<button class="button" onclick="myFunction()">Click Here</button>
 
 
 
 
-    </div>
+<h2> HTL Assignment</h2></br>
+
+
+<h6> HTL test check</h6>
+<div data-sly-test="${properties.checkbox}">
+    <h2>this is checkbox test true</h2>
+</div>
+
+<h6>Include HTL check</h6>
+<div data-sly-include="vation1.html"></div>
+
+
+<h6>resource HTL check</h6>
+<div data-sly-resource="${mango @resourceType='May/components/mango'}"></div>
+
+<h6>List HTL check</h6>
+<div data-sly-set.items="${['one','two','three','four']}"></div>
+
+<ol data-sly-list="${items}">
+
+     <li> ${item}</li>
+</ol>
+
+<h6>repeat HTL check</h6>
+<ol data-sly-repeat="${items}">
+
+     <li> ${item}</li>
+</ol>
+
+
+<div data-sly-template.vation="${@val1,val2,val3}">
+
+      <h1>${val1}</h1>
+      <h1>${val2}</h1>
+      <h1>${val3}</h1>
+
+</div>
+
+<h6>call HTL check</h6>
+<div data-sly-call="${vation @ val1='25',val2='50',val3='75'}"></div>
