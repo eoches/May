@@ -1,6 +1,4 @@
-
-
-
+<!-- 
 <div data-sly-use.model = com.adobe.aem.may.batch.core.models.VationParent>
 
     ${model.text}  <br>
@@ -26,27 +24,25 @@
 
 <h2>JavaScript Alert message display</h2>
 
-<button class="button" onclick="myFunction()">Click Here</button>
-
-
+<button class="button" onclick="myFunction()">Click Here</button> -->
 
 
 <h2> HTL Assignment</h2></br>
 
 
-<h6> HTL test check</h6>
+<h3>  Test </h3>
 <div data-sly-test="${properties.checkbox}">
     <h2>this is checkbox test true</h2>
 </div>
 
-<h6>Include HTL check</h6>
+<h3>Include</h3>
 <div data-sly-include="vation1.html"></div>
 
 
-<h6>resource HTL check</h6>
+<h3>Resource </h3>
 <div data-sly-resource="${mango @resourceType='May/components/mango'}"></div>
 
-<h6>List HTL check</h6>
+<h3>List</h3>
 <div data-sly-set.items="${['one','two','three','four']}"></div>
 
 <ol data-sly-list="${items}">
@@ -54,20 +50,34 @@
      <li> ${item}</li>
 </ol>
 
-<h6>repeat HTL check</h6>
+<h3>Repeat</h3>
 <ol data-sly-repeat="${items}">
 
      <li> ${item}</li>
 </ol>
 
 
-<div data-sly-template.vation="${@val1,val2,val3}">
+<div data-sly-template.vation="${@v1,v2,v3}">
 
-      <h1>${val1}</h1>
-      <h1>${val2}</h1>
-      <h1>${val3}</h1>
+      <h3>${v1}</h3>
+      <h3>${v2}</h3>
+      <h3>${v3}</h3>
 
 </div>
 
-<h6>call HTL check</h6>
-<div data-sly-call="${vation @ val1='25',val2='50',val3='75'}"></div>
+<h3>call</h3>
+<div data-sly-call="${vation @ v1='25',v2='50',v3='75'}"></div>
+
+<h3>Unwrap</h3>
+<div data-sly-unwrap>krishna</div><br>
+<sly>sai</sly>
+
+
+<h3>Text</h3>
+<div data-sly-text=${1==1}>krishna</div>
+
+<h3>Attribute</h3>
+<div data-sly-attribute="${myAttribute}">project</div> <br>
+
+<h3>Element</h3>
+<div data-sly-element="${'span'}"> value</div>
